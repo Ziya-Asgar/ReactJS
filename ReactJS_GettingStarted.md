@@ -6,6 +6,7 @@
     - [Upgrading `create-react-app`](#upgrading-create-react-app)
     - [Deployment with `create-react-app`](#deployment-with-create-react-app)
   - [Using `Vite`](#using-vite)
+  - [Importing and initial steps of creating a React app](#importing-and-initial-steps-of-creating-a-react-app)
 
 ---
 
@@ -125,6 +126,27 @@ export default defineConfig({
     port: 3000,
   },
 });
+```
+
+---
+
+---
+
+## Importing and initial steps of creating a React app
+
+To use react in our javascript files, we need to import `react` and `react-dom`:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+```
+
+Starting from react 18, instead of `ReactDOM.render()`, we use `createRoot()`. `createRoot` lets you create a root to display React components inside a browser DOM node. After using `createRoot()`, we render the component with `render()`:
+
+```js
+import ReactDOM from "react-dom/client";
+
+ReactDOM.createRoot(document.getElementById("root")).render(<component>);
 ```
 
 ---

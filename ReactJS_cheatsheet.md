@@ -2,39 +2,37 @@
 
 - [React JS](#react-js)
   - [Getting Started with ReactJS](#getting-started-with-reactjs)
-  - [ReactJS code examples, explanations, and tips](#reactjs-code-examples-explanations-and-tips)
-    - [Importing and initial steps of creating a React app](#importing-and-initial-steps-of-creating-a-react-app)
-    - [`<React.StrictMode>`](#reactstrictmode)
-    - [Creating and Using a Component](#creating-and-using-a-component)
-    - [Component with props](#component-with-props)
-      - [`children` prop](#children-prop)
-      - [Prop Types](#prop-types)
-    - [Adding events to a component](#adding-events-to-a-component)
-    - [Conditional Rendering](#conditional-rendering)
-      - [`if`](#if)
-      - [logical and - `&&`](#logical-and---)
-      - [logical or - `||`](#logical-or---)
-      - [ternary operator - `? :`](#ternary-operator----)
-    - [Rendering lists of components and data](#rendering-lists-of-components-and-data)
-      - [`map` method](#map-method)
-      - [`filter` method](#filter-method)
-    - [Exporting and Importing](#exporting-and-importing)
-    - [Inline styling of a component](#inline-styling-of-a-component)
-    - [Hooks](#hooks)
-      - [`useState`](#usestate)
-      - [`useReducer`](#usereducer)
-      - [`useEffect`](#useeffect)
-      - [`useRef`](#useref)
-      - [`forwardRef`](#forwardref)
-      - [`useImperativeHandle`](#useimperativehandle)
-      - [`useMemo`](#usememo)
-      - [`useCallback`](#usecallback)
-      - [Context API](#context-api)
-        - [How to use Context and set value of context in child components](#how-to-use-context-and-set-value-of-context-in-child-components)
-    - [Suspense component and lazy](#suspense-component-and-lazy)
-      - [Suspense](#suspense)
-      - [lazy](#lazy)
-      - [Usage](#usage)
+  - [`<React.StrictMode>`](#reactstrictmode)
+  - [Creating and Using a Component](#creating-and-using-a-component)
+  - [Component with props](#component-with-props)
+    - [`children` prop](#children-prop)
+    - [Prop Types](#prop-types)
+  - [Adding events to a component](#adding-events-to-a-component)
+  - [Conditional Rendering](#conditional-rendering)
+    - [`if`](#if)
+    - [logical and - `&&`](#logical-and---)
+    - [logical or - `||`](#logical-or---)
+    - [ternary operator - `? :`](#ternary-operator----)
+  - [Rendering lists of components and data](#rendering-lists-of-components-and-data)
+    - [`map` method](#map-method)
+    - [`filter` method](#filter-method)
+  - [Exporting and Importing](#exporting-and-importing)
+  - [Inline styling of a component](#inline-styling-of-a-component)
+  - [Hooks](#hooks)
+    - [`useState`](#usestate)
+    - [`useReducer`](#usereducer)
+    - [`useEffect`](#useeffect)
+    - [`useRef`](#useref)
+    - [`forwardRef`](#forwardref)
+    - [`useImperativeHandle`](#useimperativehandle)
+    - [`useMemo`](#usememo)
+    - [`useCallback`](#usecallback)
+    - [Context API](#context-api)
+      - [How to use Context and set value of context in child components](#how-to-use-context-and-set-value-of-context-in-child-components)
+  - [Suspense component and lazy](#suspense-component-and-lazy)
+    - [Suspense](#suspense)
+    - [lazy](#lazy)
+    - [Usage](#usage)
 
 <hr>
 
@@ -44,28 +42,7 @@
 
 <hr>
 
-## ReactJS code examples, explanations, and tips
-
-### Importing and initial steps of creating a React app
-
-To use react in our javascript files, we need to import `react` and `react-dom`:
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-```
-
-Starting from react 18, instead of `ReactDOM.render()`, we use `createRoot()`. `createRoot` lets you create a root to display React components inside a browser DOM node. After using `createRoot()`, we render the component with `render()`:
-
-```js
-import ReactDOM from "react-dom/client";
-
-ReactDOM.createRoot(document.getElementById("root")).render(<component>);
-```
-
-<hr>
-
-### `<React.StrictMode>`
+## `<React.StrictMode>`
 
 `<StrictMode>` or `<React.StrictMode>` lets you find common bugs in your components early during development. Use `StrictMode` to enable additional development behaviors and warnings for the component tree inside:
 
@@ -126,7 +103,7 @@ function App() {
 
 <hr>
 
-### Creating and Using a Component
+## Creating and Using a Component
 
 This is how we create and use a component.
 
@@ -167,7 +144,7 @@ We recommend using a [converter](https://transform.tools/html-to-jsx) to transla
 
 <hr>
 
-### Component with props
+## Component with props
 
 This is how to create a component that accepts _props_ and how to use it:
 
@@ -306,7 +283,7 @@ export default function Listings() {
 
 <hr>
 
-#### `children` prop
+### `children` prop
 
 When we use the components like this `<component> ... </component>`, everything between tags can be accessed through the `children` property. In the below example, we create the _book_ component that expects _title_ and `children` as part of props. Then we render them inside an `article` tag. When we use the _book_ component, we provide a value for the _title_, and everything that we put between the opening and closing _book_ tags become `children` of the _book_ component.
 
@@ -334,7 +311,7 @@ function BookList() {
 }
 ```
 
-#### Prop Types
+### Prop Types
 
 React will ask to set static types for props. If we want React to stop doing that, and if we use Vite, we can add the below code to the `rules` part of the **.eslintrc.cjs** file:
 
@@ -574,7 +551,7 @@ We can use the `shape` to specify objects:
 
 <hr>
 
-### Adding events to a component
+## Adding events to a component
 
 We can add a click event to a button in a component like this:
 
@@ -641,11 +618,11 @@ export default function Toolbar() {
 
 <hr>
 
-### Conditional Rendering
+## Conditional Rendering
 
 In React, you can conditionally render JSX using JavaScript syntax like `if` statements, `&&,` `||`, and `? :` operators.
 
-#### `if`
+### `if`
 
 ```js
 function Item({ name, isPacked }) {
@@ -669,7 +646,7 @@ export default function PackingList() {
 }
 ```
 
-#### logical and - `&&`
+### logical and - `&&`
 
 Remember that the `&&` operator (logical AND) returns the first operand if it is "falsy", or the second operand if the first operand is "truthy".
 
@@ -696,7 +673,7 @@ const Cleanup = () => {
 export default Cleanup;
 ```
 
-#### logical or - `||`
+### logical or - `||`
 
 The `||` operator (logical OR) returns the first operand if it is "truthy", or the second operand if the first operand is "falsy".
 
@@ -719,7 +696,7 @@ export default function Names() {
 
 <hr>
 
-#### ternary operator - `? :`
+### ternary operator - `? :`
 
 In JavaScript, the ternary operator is a way to concisely express a simple conditional statement. It is often called the "conditional operator" or the "ternary conditional operator".
 
@@ -767,9 +744,9 @@ export default UserChallenge;
 
 <hr>
 
-### Rendering lists of components and data
+## Rendering lists of components and data
 
-#### `map` method
+### `map` method
 
 You will rely on JavaScript features like `for` loop and the array `map()` method to render lists of components.
 
@@ -791,7 +768,7 @@ Notice how `<li>` has a `key` attribute. For each item in a list, you should pas
 
 <hr>
 
-#### `filter` method
+### `filter` method
 
 Here is an example of using `filter` in ReactJS:
 
@@ -832,7 +809,7 @@ export default function PeopleList() {
 
 <hr>
 
-### Exporting and Importing
+## Exporting and Importing
 
 How you export your component dictates how you must import it.
 
@@ -856,7 +833,7 @@ When you write a default `import`, you can put any name you want after `import`.
 
 <hr>
 
-### Inline styling of a component
+## Inline styling of a component
 
 When you need an inline style, you pass an object to the `style` attribute:
 
@@ -881,9 +858,9 @@ The next time you see `{{` and `}}` in JSX, know that it’s nothing more than a
 
 <hr>
 
-### Hooks
+## Hooks
 
-#### `useState`
+### `useState`
 
 `useState` hook returns an array with two elements:
 
@@ -1221,7 +1198,7 @@ export default function Replace() {
 
 <hr>
 
-#### `useReducer`
+### `useReducer`
 
 There is a different way of handling state updates, and that's by using reducers. You can add a reducer to your component using the `useReducer` hook. Import the `useReducer` method from the library like this:
 
@@ -1326,7 +1303,7 @@ export default Counter;
 
 <hr>
 
-#### `useEffect`
+### `useEffect`
 
 The `useEffect` Hook allows you to perform side effects in your components. The word effect refers to a functional programming term called a "side effect".
 
@@ -1456,7 +1433,7 @@ Components are unmounted when the parent component is no longer rendered or the 
 
 <hr>
 
-#### `useRef`
+### `useRef`
 
 `useRef` is a React Hook that lets you reference a value that’s not needed for rendering.
 
@@ -1583,7 +1560,7 @@ callback function of the `useEffect(callback, [])` is the right place to access 
 
 <hr>
 
-#### `forwardRef`
+### `forwardRef`
 
 To access a DOM element rendered in the component's body you can use a ref created by `useRef()` hook. But what if you need to access a DOM element of a child component? Then a simple ref is not enough and you have to combine refs with `React.forwardRef()`: a technique called refs forwarding.
 
@@ -1640,7 +1617,7 @@ const GrandChild = forwardRef(function (props, ref) {
 
 <hr>
 
-#### `useImperativeHandle`
+### `useImperativeHandle`
 
 In essence the only thing this hook does is let you create a completely custom value for the ref you return from a custom component. This means you can do more than just assign a single element to your ref for example.
 
@@ -1692,7 +1669,7 @@ export default React.forwardRef(CustomInput);
 
 <hr>
 
-#### `useMemo`
+### `useMemo`
 
 Memoization is an optimization technique that passes a complex function to be memoized. In memoization, the result is “remembered” when the same parameters are passed-in subsequently.
 
@@ -1746,7 +1723,7 @@ However, if you click Re-render button, 'factorialOf(n) called!' isn't logged to
 
 <hr>
 
-#### `useCallback`
+### `useCallback`
 
 Before diving into `useCallback()` use, let's distinguish the problem `useCallback()` solves — the functions equality check.
 
@@ -1788,7 +1765,7 @@ function MyComponent() {
 
 <hr>
 
-#### Context API
+### Context API
 
 React context allows us to share data (state) across our components more easily. You can think of React context as the equivalent of global variables for our React components.
 
@@ -1966,7 +1943,7 @@ export default function UserInfo() {
 }
 ```
 
-##### How to use Context and set value of context in child components
+#### How to use Context and set value of context in child components
 
 ```js
 //Context.js
@@ -2024,9 +2001,9 @@ export default function ComponentB() {
 
 <hr>
 
-### Suspense component and lazy
+## Suspense component and lazy
 
-#### Suspense
+### Suspense
 
 `Suspense` lets you display a fallback until its children have finished loading. The `Suspense` component receives two props, `children` and `fallback`. It then renders `fallback` until all the data required by `children` is available and `children` can be rendered.
 
@@ -2042,7 +2019,7 @@ Only Suspense-enabled data sources will activate the `Suspense` component. They 
 
 <hr>
 
-#### lazy
+### lazy
 
 `lazy` lets you defer loading component’s code until it is rendered for the first time. It is also known as on-demand loading because it only loads content visible on users’ screens.
 
@@ -2062,7 +2039,7 @@ Do not declare lazy components inside other components. This will cause all stat
 
 <hr>
 
-#### Usage
+### Usage
 
 ```js
 import React, { Suspense } from "react";
