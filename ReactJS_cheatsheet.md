@@ -3,7 +3,7 @@
 - [React JS](#react-js)
   - [Getting Started with ReactJS](#getting-started-with-reactjs)
   - [Strict Mode](#strict-mode)
-  - [Creating and Using a Component](#creating-and-using-a-component)
+  - [Creating ans Using Components](#creating-ans-using-components)
   - [Component with props](#component-with-props)
     - [`children` prop](#children-prop)
     - [Prop Types](#prop-types)
@@ -48,44 +48,9 @@
 
 <hr>
 
-## Creating and Using a Component
+## Creating ans Using Components
 
-This is how we create and use a component.
-
-```js
-function Greeting() {
-  return <h2>My First Component</h2>;
-}
-
-function App() {
-  return <Greeting />;
-}
-```
-
-```js
-// arrow function also works
-const Greeting = () => {
-  return <h2>My First Component</h2>;
-};
-
-function App() {
-  return <Greeting />;
-}
-```
-
-<hr>
-
-**Notes**:
-
-- A component must start with capital letter
-- A component must return JSX (html)
-- When we use the components, we can either use them as a self-closing tag `<Greeting/>` or like this: `<Greeting>...<Greeting/>`
-
-JSX requires tags to be explicitly closed: self-closing tags like `<img>` must become `<img />`.
-
-For historical reasons, `aria-*` and `data-*` attributes are written as in HTML with dashes.
-
-We recommend using a [converter](https://transform.tools/html-to-jsx) to translate your existing HTML and SVG to JSX.
+[Creating ans Using Components](./ReactJS_CreatingUsingComponents.md)
 
 <hr>
 
