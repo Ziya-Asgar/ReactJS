@@ -1,7 +1,7 @@
 # React JS
 
 - [Getting Started with ReactJS](./Topics/ReactJS_GettingStarted.md)
-- [Strict Mode](./Topics/ReatJS_StrictMode.md)
+- [Strict Mode](./Topics/ReactJS_StrictMode.md)
 - [Creating and Using Components](./Topics/ReactJS_CreatingUsingComponents.md)
 - [Components with Props](./Topics/ReactJS_ComponentProps.md)
 - [Handling Events](./Topics/ReactJS_HandlingEvents.md)
