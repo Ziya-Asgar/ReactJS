@@ -1,16 +1,16 @@
 # React JS
 
-- [Getting Started with ReactJS](./ReactJS_GettingStarted.md)
-- [Strict Mode](./ReatJS_StrictMode.md)
-- [Creating and Using Components](./ReactJS_CreatingUsingComponents.md)
-- [Components with Props](./ReactJS_ComponentProps.md)
-- [Handling Events](./ReactJS_HandlingEvents.md)
-- [Conditional Rendering](./ReactJS_ConditionalRendering.md)
-- [Rendering Lists](./ReactJS_RenderingLists.md)
-- [Exporting and Importing](./ReactJS_ExportingImporting.md)
-- [Inline Styling](./ReactJS_InlineStyling.md)
-- [Hooks](./ReactJS_Hooks.md)
-- [Suspense and Lazy Loading](./ReactJS_SuspenseLazyLoading.md)
+- [Getting Started with ReactJS](./Topics/ReactJS_GettingStarted.md)
+- [Strict Mode](./Topics/ReatJS_StrictMode.md)
+- [Creating and Using Components](./Topics/ReactJS_CreatingUsingComponents.md)
+- [Components with Props](./Topics/ReactJS_ComponentProps.md)
+- [Handling Events](./Topics/ReactJS_HandlingEvents.md)
+- [Conditional Rendering](./Topics/ReactJS_ConditionalRendering.md)
+- [Rendering Lists](./Topics/ReactJS_RenderingLists.md)
+- [Exporting and Importing](./Topics/ReactJS_ExportingImporting.md)
+- [Inline Styling](./Topics/ReactJS_InlineStyling.md)
+- [Hooks](./Topics/ReactJS_Hooks.md)
+- [Suspense and Lazy Loading](./Topics/ReactJS_SuspenseLazyLoading.md)
 
 ---
 
